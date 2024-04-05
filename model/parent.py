@@ -34,7 +34,7 @@ from model.baby import Baby
 # );
 
 
-class ParentType(BaseModel):
+class Parent(BaseModel):
     parent_id: str
     password: str
     email: str
@@ -58,7 +58,7 @@ class ParentType(BaseModel):
         super().__init__(**kwargs)
 
 
-class Parent(DB_Base):
+class ParentTable(DB_Base):
     __tablename__ = 'parent'
     parent_id = Column(String(255), primary_key=True, nullable=False)
     password = Column(String(255), nullable=True)
